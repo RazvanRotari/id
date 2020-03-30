@@ -25,6 +25,11 @@ Run tests:
 ./test_id.py
 ```
 
+## Dependencies
+Optional - to run the id_fs
+```
+pip install --user fuse-python
+```
 
 Check id.py for more the implementation
 
@@ -34,5 +39,8 @@ UUIDv1 - It includes 2 parts: 48-bit Host Mac Address (so already unique for dif
 	who generate it), 60-bit Timestamp (nanoseconds precision, even two subsequent generate
 	function calls will never generate same timestamps). It's harder to measure a clash here
 	but it is always better to use this version, and later in post, I will explain why.
+
+
 [2] https://github.com/twitter-archive/snowflake
+
 [3] https://www.callicoder.com/distributed-unique-id-sequence-number-generator/
