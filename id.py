@@ -170,8 +170,8 @@ generator = PersistentIdGenerator(node_id(), timestamp() - START_TIME)
 Generate an unique id
 @Params: None
 """
-def id():
+def get_id():
     return generator.generate_id()
 
 if __name__ == "__main__":
-    print(id())
+    print(get_id())

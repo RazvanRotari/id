@@ -66,7 +66,7 @@ class HelloFS(Fuse):
     def read(self, path, size, offset):
         if path != hello_path:
             return -errno.ENOENT
-        data = str.encode(str(id.id()) + "\n")
+        data = str.encode(str(id.get_id()) + "\n")
         slen = len(data)
         if offset < slen:
             if offset + size > slen:
